@@ -3,7 +3,7 @@ $(function () {
  $('.hamburger').click(function(){
   $(this).toggleClass('active');
   $('.menu').toggleClass('open');
-  $('overlay').toggleClass('open');
+  $('.overlay').toggleClass('open');
  });
  $('.overlay').click(function(){
   $('.hamburger').removeClass('active');
