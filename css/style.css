@@ -1,0 +1,98 @@
+
+body{
+    font-family: 'Roboto','Yu Gothic', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+img{
+    margin: 0 auto;
+}
+
+h1{
+    padding:80px 0;
+    font-size: 1.5rem;
+}
+h2{
+    padding:12px 0;
+    font-size: 1.2rem;
+}
+
+.hamburger{
+    width:40px;
+    cursor: pointer;
+    position: fixed;
+    top:20px;
+    right: 20px;
+    z-index: 1001;
+}
+.hamburger span{
+    display: block;
+    height: 3px;
+    margin: 8px 0;
+    background: #fff;
+    transition: 0.4s;
+}
+
+.hamburger.active span:nth-child(1){
+    transform: rotate(45deg) translate(8px, 7px);
+    background: cadetblue;
+}
+.hamburger.active span:nth-child(2){
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3){
+    transform: rotate(-45deg) translate(8px, -7px);
+    background: cadetblue;
+}
+
+.menu{
+    position: fixed;
+    top:0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+.menu.open{
+    right:0;
+}
+.overlay{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 999;
+}
+.overlay.open{
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu li{
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+main{
+    background-color:cadetblue;
+    color:#fff;
+    height:calc(100vh - 40px);
+    padding: 40vh;
+}
+
+footer{
+    margin: 80px 0 auto;
+    padding:20px 0;
+    background-color: rgb(175, 212, 209);
+    position: fixed;
+    bottom:0;
+    width: 100%;
+}
